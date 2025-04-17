@@ -103,8 +103,8 @@ public class UpgradeVersionCommand : ExternalCommand
 
   private List<string> GetRevitFiles( string folderPath )
   {
-    // Get all .rvt files in the specified folder and all subfolders
-    var allRevitFiles = Directory.GetFiles( folderPath, "*.rvt", SearchOption.AllDirectories ) ;
+    // Get all .rvt and .rfa files in the specified folder and all subfolders
+    var allRevitFiles = Directory.GetFiles( folderPath, "*.rvt", SearchOption.AllDirectories ).Concat( Directory.GetFiles( folderPath, "*.rfa", SearchOption.AllDirectories ) ) ;
 
     // Filter out backup files (files ending with .0001, .0002, .0003, .0001.0001, etc.)
     var revitFiles = allRevitFiles.Where( file =>
