@@ -3,7 +3,7 @@
         <Name>UpgradeVersion</Name>
         <Assembly>UpgradeVersion/UpgradeVersion.dll</Assembly>
         <AddInId>38EA2AB1-67DD-4FCA-BD8E-23A6E8EED315</AddInId>
-        <FullClassName>UpgradeVersion.Commands.StartupCommand</FullClassName>
+        <FullClassName>UpgradeVersion.Commands.UpgradeVersionCommand</FullClassName>
         <Text>UpgradeVersion</Text>
         <VendorId>Development</VendorId>
         <VendorDescription></VendorDescription>
