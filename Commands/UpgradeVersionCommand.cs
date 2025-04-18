@@ -16,7 +16,7 @@ namespace UpgradeVersion.Commands ;
 /// </summary>
 [UsedImplicitly]
 [Transaction( TransactionMode.Manual )]
-public class UpgradeVersionCommand : ExternalCommand
+public class UpgradeVersionCommand : ExternalCommand, IExternalCommandAvailability
 {
   public const string PlaceHolderName = "placeholder.rvt" ;
 
@@ -125,4 +125,6 @@ public class UpgradeVersionCommand : ExternalCommand
     commandData.Application.OpenAndActivateDocument( PlaceHolderPath ) ;
     documentActiveView.Close( true ) ;
   }
+
+  public bool IsCommandAvailable( UIApplication applicationData, CategorySet selectedCategories ) => true;
 }
